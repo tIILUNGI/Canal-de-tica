@@ -27,13 +27,6 @@ export const ReportDetail: React.FC<ReportDetailProps> = ({
 }) => {
   const currentStepIdx = triageSteps.findIndex(s => s.status === report.status);
 
-  const getFileIcon = () => {
-    if (!report.evidence) return 'no_photography';
-    if (report.evidenceType?.startsWith('image/')) return 'image';
-    if (report.evidenceType === 'application/pdf') return 'picture_as_pdf';
-    return 'insert_drive_file';
-  };
-
   return (
     <div className="fixed inset-0 z-60 flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-md animate-in fade-in duration-300">
       <div className="bg-white w-[98vw] max-w-7xl h-[94vh] rounded-6xl shadow-2xl flex flex-col lg:flex-row overflow-hidden animate-in zoom-in-95 duration-300">
