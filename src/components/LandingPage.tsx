@@ -56,13 +56,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ onNavigate, user, onLogout })
       <main className="flex-1 w-full">
         {/* Hero Section - RESTORED ORIGINAL DESIGN */}
         <section className="relative min-h-[85vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-primary">
             <img 
               alt="Canal de Denúncia Anónima" 
-              className="h-full w-full object-cover" 
+              className="h-full w-full object-cover opacity-40" 
               src="/R.png" 
             />
-            <div className="absolute inset-0 bg-linear-to-r from-primary/95 via-primary/80 to-primary/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/60" />
           </div>
           <div className="relative z-10 w-full">
             <div className="mx-auto max-w-7xl px-6 pt-20 pb-16">
