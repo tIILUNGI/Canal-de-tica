@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a293c;
+  --color-accent-emerald: #059669;
+  --color-background-light: #f6f7f7;
+  --color-background-dark: #15191d;
+  
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Inter", sans-serif;
+  
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background-light);
+    color: #1e293b;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+  
+  .dark body {
+    background-color: var(--color-background-dark);
+    color: #f1f5f9;
+  }
+}
+
+@layer components {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  /* Restored the previous primary/secondary styles precisely */
+  .btn-primary {
+    @apply flex items-center justify-center gap-2 rounded-lg bg-accent-emerald px-6 py-4 text-white font-bold shadow-lg shadow-accent-emerald/20 hover:opacity-90 transition-all active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply flex items-center justify-center gap-2 rounded-lg bg-white border-2 border-primary/10 px-6 py-4 text-primary font-bold hover:bg-slate-50 transition-all active:scale-95;
+  }
+
+  .glass-header {
+    @apply sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md;
+  }
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
+}
+
+/* Animations for transitions without changing the core design */
+.animate-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

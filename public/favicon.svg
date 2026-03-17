@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+  <!-- Background circle -->
+  <circle cx="24" cy="24" r="24" fill="#863bff"/>
+  <!-- Shield icon -->
+  <path d="M24 6L10 12V22C10 30.28 16 38 24 42C32 38 38 30.28 38 22V12L24 6Z" fill="white"/>
+  <!-- Shield inner detail -->
+  <path d="M24 14L14 18V24C14 29.52 18.5 35 24 38C29.5 35 34 29.52 34 24V18L24 14Z" fill="#863bff"/>
+  <!-- Check mark -->
+  <path d="M20 24L23 27L28 21" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

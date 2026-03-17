@@ -1,0 +1,4 @@
+// Componentes comuns reutilizáveis
+export { Button } from './Button';
+export { Card } from './Card';
+export { Input, Textarea } from './Input';
